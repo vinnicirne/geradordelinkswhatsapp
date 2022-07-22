@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Link para Whatsapp</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,600" rel="stylesheet">
+<link rel="stylesheet" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/css/style.css">
+
+<!--modificações em testes--> ><!--subindo para o github-->
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/css/topper.css">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-ML4C83');
+    </script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML4C83" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity<="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/js/topper4.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            if ($(window).width() < 701) {
+            setTimeout(function(){ Topper({
+                    title: 'Flash Love',
+                    text: 'Criação de site e aplicativos em 5min.',
+                    style: 'danger',
+                    type: 'top',
+                    autoclose: false,
+                })}, 4000);
+
+            }
+        });
+    </script>
+
+    <div id="app" class="box-center">
+            <aside class="col-half col-half--first">
+            <div class="col-half--first__wrap">
+            <a target="_blank" href="https://linkwhats.000webhostapp.com/">
+            <figure class="flex-default logo-cvttgo">
+            <img src="img/228-54.png" alt="" class="img" />
+            </figure>
+            </a>
+            <h2 class="tit-principal">Crie seu link para Whatsapp <figure class="flex-default">            
+            </figure>
+        </h2>
+        <div class="box-mensagem box-mensagem--error" v-if="mensagemError">
+            {{ mensagemError }}
+        </div>
+
+    <form class="form" @submit="event.preventDefault()" v-if="!sucessForm">
+        <div class="form__control">
+            <label for="numero" class="form__label form__label--numero">
+            Número do celular
+            <input type="text" placeholder="(DDD) 0 0000-0000" class="form__input" id="numero" v-model="numero" @keyup="validaNumero" />
+            </label>   
+            <input type="text" class="input-hidden" v-model="robo" />
+        </div>
+        <div class="form__control">
+            <label for="mensagem" class="form__label form__label--mensagem">Mensagem
+            <input type="text" placeholder="Digite sua mensagem" class="form__input" id="mensagem" v-model="mensagem" />
+            </label>
+        </div>
+            <button type="submit" class="form__submit" @click="gerarLink">Gerar Link</button>
+            <small class="tit-obs">Não guardamos nenhum dado informado.</small>
+    </form>
+
+    <!--O erro esta por aqui, preciso achar!-->    
+    <div class="box-mensagem" v-if="sucessForm">
+        <div class="box-input form form--inline">
+        <label for="numero" class="form__label form__label--copy">
+        Link gerado
+        <input type="text" class="form__input form__input--text" v-model="link" />
+        </label>
+
+        <h2 class="msg-ok"><strong>Pronto! </strong> Copie e compartilhe com usuários do Whatsapp!</h2>
+        <input type="text" class="input-hidden" v-model="robo" />
+        <button class="form__submit form__input--copy" @click="copiarLink">Copiar Link</button>
+        <button class="form__submit form__input--copy" @click="gerarNovoLink">Gerar novo link.</button>
+    </div>
+    </div>
+            <div class="side-content">
+                    <h3>Como funciona?</h3>
+                <ul>
+                    <li>Insira o nº do WhatsApp Ex: 85 9 9660-5866</li>
+                    <li>Escreva a mensagem padrão que será exibida</li>
+                    <li>Clique em “<strong>GERAR LINK</strong>”</li>
+                    <li>Copie o link e compartilhe</li>
+                    <li>Antes de usar, faça o teste</li>
+                </ul>
+                    <h6><span style="color: #9c9c9c;">O gerador de links para o WhatsApp é uma ótima ferramenta para ações de marketing ou relacionamento. Com o</span>
+                    <span style="color: #9c9c9c;">link para mensagens personalizadas do WhatsApp, você poderá utilizar em campanhas, redes sociais, email</span>
+                    <span style="color: #9c9c9c;">marketing, banners e etc. O bom de encurtar e personalizar links e mensagens do WhatsApp é que funcionará no</span>
+                    <span style="color: #9c9c9c;">desktop e no mobile da mesma forma. Faça bom uso da ferramenta encurtadora de WhatsApp.</span></h6> </div>
+                    </aside>
+                    <div class="col-half flex-center right-side">
+                    <div class="wrap-content">
+                    <h3>Crie sua loja online em cinco minutos</h3><br>
+                    <br>
+                    <span style="color: #ffffff;"> </span>
+                    <a href="https://bit.ly/Banner_Convertte_Desktop" target="_blank" rel="noopener" class="show-in-desktop"><img class="alignright wp-image-6437 size-medium" src="https://conheca.flashlove.com.br/wp-content/uploads/elementor/thumbs/1Q-pqhw1bnbo9ag10wvbz7fm2fro5145hxbldzseuneo0.png" alt="" width="350" height="250" /></a>
+                    <a href="https://bit.ly/BottomBannerConvertte" target="_blank" rel="noopener" class="show-in-mobile"><img class="alignright wp-image-6437 size-medium" src="https://conheca.flashlove.com.br/wp-content/uploads/elementor/thumbs/2Q-pqhw1bnbo9ag10wvbz7fm2fro5145hxbldzseuneo0.png" alt="" width="350" height="250" /></a>
+                </ul>
+                    <a class="btn-redirect show-in-desktop" href="https://bit.ly/Banner_Convertte_Desktop" target="_blank" rel="noopener"><strong>Tenho Interesse</strong></a>
+            </div>
+        </div>
+<script type="text/javascript" src="//js.frubil.info/"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+<script src="https://unpkg.com/axios@0.17.0/dist/axios.min.js"></script>
+<script src="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/js/mask.min.js"></script>
+<script src="https://www.convertte.com.br/cvtt/wp-content/themes/cvtt_v3/assets/gerador-link-new/js/main_test.js"></script>
+    </body>
+</html>
